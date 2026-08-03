@@ -128,12 +128,12 @@ plugins:
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
       puml_keyword: plantuml
-  - minify:
-      minify_html: true
+  #- minify:
+  #    minify_html: true
   - search
-  - mkdocs-jupyter:
-      execute: false
-      allow_errors: true
+  #- mkdocs-jupyter:
+  #    execute: false
+  #    allow_errors: true
 
 theme:
   favicon: assets/ibmec_icon.png
