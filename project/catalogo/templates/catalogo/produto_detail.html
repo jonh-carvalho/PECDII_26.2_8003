@@ -1,0 +1,21 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}{{ produto.nome }}{% endblock %}
+
+{% block content %}
+<div class="detail-card">
+    <h2>{{ produto.nome }}</h2>
+    <p class="category">Categoria: {{ produto.categoria }}</p>
+    <p class="description">{{ produto.descricao|default:'Sem descrição.' }}</p>
+    <div class="detail-meta">
+        <span>Preço: <strong>R$ {{ produto.preco }}</strong></span>
+        <span>Estoque: <strong>{{ produto.estoque }}</strong></span>
+        <span>Status: <strong>{% if produto.disponivel %}Disponível{% else %}Indisponível{% endif %}</strong></span>
+    </div>
+    <div class="card-actions">
+        <a class="button primary" href="{% url 'produto_update' produto.pk %}">Editar</a>
+        <a class="button danger" href="{% url 'produto_delete' produto.pk %}">Excluir</a>
+        <a class="button secondary" href="{% url 'produto_list' %}">Voltar ao catálogo</a>
+    </div>
+</div>
+{% endblock %}

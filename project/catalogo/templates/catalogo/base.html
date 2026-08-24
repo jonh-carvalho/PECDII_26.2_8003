@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Catálogo{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'catalogo/styles.css' %}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1><a href="{% url 'produto_list' %}">Loja Online</a></h1>
+            <nav>
+                <a href="{% url 'produto_list' %}">Catálogo</a>
+                <a href="{% url 'produto_create' %}">Novo produto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}{% if form.instance.pk %}Editar produto{% else %}Novo produto{% endif %}{% endblock %}
+
+{% block content %}
+<div class="form-card">
+    <h2>{% if form.instance.pk %}Editar produto{% else %}Novo produto{% endif %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="card-actions">
+            <button class="button primary" type="submit">Salvar</button>
+            <a class="button secondary" href="{% url 'produto_list' %}">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

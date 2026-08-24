@@ -1,0 +1,258 @@
+:root {
+    --bg: #f5f7fb;
+    --panel: #ffffff;
+    --primary: #1f6feb;
+    --primary-dark: #1247a6;
+    --danger: #d32f2f;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --success: #198754;
+    --warning: #b7791f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.topbar {
+    background: #111827;
+    color: white;
+    padding: 18px 0;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    opacity: 0.9;
+}
+
+main {
+    padding: 32px 0 60px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.search-form input {
+    width: min(100%, 420px);
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.product-card, .detail-card, .form-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04);
+}
+
+.product-card {
+    position: relative;
+}
+
+.product-badge {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    font-weight: bold;
+}
+
+.product-badge.available {
+    background: rgba(25, 135, 84, 0.1);
+    color: var(--success);
+}
+
+.product-badge.unavailable {
+    background: rgba(211, 47, 47, 0.08);
+    color: var(--danger);
+}
+
+.product-card h3 {
+    margin: 18px 0 8px;
+}
+
+.category {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 10px;
+}
+
+.description {
+    color: var(--text);
+    min-height: 68px;
+    line-height: 1.5;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    gap: 8px;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.stock {
+    font-size: 0.88rem;
+    color: var(--muted);
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.button, .card-actions a, button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button.primary, .card-actions a {
+    background: var(--primary);
+    color: white;
+}
+
+.button.secondary, .card-actions a:nth-child(3) {
+    background: #eef2ff;
+    color: #1f2937;
+}
+
+.button.danger, .card-actions a.danger {
+    background: var(--danger);
+    color: white;
+}
+
+.actions {
+    margin-bottom: 24px;
+}
+
+.empty-state {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.detail-card h2, .form-card h2 {
+    margin-top: 0;
+}
+
+.detail-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font: inherit;
+}
+
+form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+@media (max-width: 700px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form {
+        justify-content: stretch;
+    }
+
+    .search-form input {
+        width: 100%;
+    }
+
+    .topbar .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

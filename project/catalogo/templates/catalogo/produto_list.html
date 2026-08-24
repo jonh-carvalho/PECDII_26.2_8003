@@ -1,0 +1,45 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Catálogo de produtos{% endblock %}
+
+{% block content %}
+<div class="toolbar">
+    <h2>Catálogo de produtos</h2>
+    <form method="get" class="search-form">
+        <input type="text" name="q" value="{{ request.GET.q|default:'' }}" placeholder="Buscar por nome, categoria ou descrição">
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+
+<div class="actions">
+    <a class="button primary" href="{% url 'produto_create' %}">Adicionar produto</a>
+</div>
+
+{% if produtos %}
+    <div class="product-grid">
+        {% for produto in produtos %}
+            <article class="product-card">
+                <div class="product-badge {% if produto.disponivel %}available{% else %}unavailable{% endif %}">
+                    {% if produto.disponivel %}Disponível{% else %}Indisponível{% endif %}
+                </div>
+                <h3>{{ produto.nome }}</h3>
+                <p class="category">{{ produto.categoria }}</p>
+                <p class="description">{{ produto.descricao|truncatechars:120 }}</p>
+                <div class="price-row">
+                    <span class="price">R$ {{ produto.preco }}</span>
+                    <span class="stock">Estoque: {{ produto.estoque }}</span>
+                </div>
+                <div class="card-actions">
+                    <a href="{% url 'produto_detail' produto.pk %}">Detalhes</a>
+                    <a href="{% url 'produto_update' produto.pk %}">Editar</a>
+                    <a class="danger" href="{% url 'produto_delete' produto.pk %}">Excluir</a>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="empty-state">
+        <p>Nenhum produto encontrado.</p>
+    </div>
+{% endif %}
+{% endblock %}

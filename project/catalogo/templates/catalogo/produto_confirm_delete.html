@@ -1,0 +1,17 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Excluir produto{% endblock %}
+
+{% block content %}
+<div class="form-card">
+    <h2>Excluir produto</h2>
+    <p>Tem certeza que deseja excluir <strong>{{ object.nome }}</strong>?</p>
+    <form method="post">
+        {% csrf_token %}
+        <div class="card-actions">
+            <button class="button danger" type="submit">Confirmar exclusão</button>
+            <a class="button secondary" href="{% url 'produto_detail' object.pk %}">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

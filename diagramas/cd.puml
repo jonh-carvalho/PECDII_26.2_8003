@@ -1,0 +1,124 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide circle
+
+class Cliente {
+  - id: int
+  - nome: String
+  - email: String
+  - senha: String
+  - endereco: Endereco
+  + consultarCatalogo(): List<Produto>
+  + pesquisarProduto(nome: String): List<Produto>
+  + adicionarAoCarrinho(produto: Produto, quantidade: int): void
+  + revisarCarrinho(): Carrinho
+  + iniciarCheckout(): Pedido
+  + confirmarCompra(): void
+}
+
+class Carrinho {
+  - itens: List<ItemCarrinho>
+  + adicionarProduto(produto: Produto, quantidade: int): void
+  + removerProduto(produto: Produto): void
+  + calcularTotal(): double
+  + limpar(): void
+}
+
+class ItemCarrinho {
+  - produto: Produto
+  - quantidade: int
+  + subtotal(): double
+}
+
+class Produto {
+  - id: int
+  - nome: String
+  - descricao: String
+  - preco: double
+  - estoque: int
+  + verificarDisponibilidade(): boolean
+  + atualizarEstoque(quantidade: int): void
+}
+
+class Pedido {
+  - id: int
+  - data: Date
+  - status: String
+  - valorTotal: double
+  - cliente: Cliente
+  - enderecoEntrega: Endereco
+  - formaPagamento: FormaPagamento
+  + registrar(): void
+  + atualizarStatus(status: String): void
+  + gerarNumeroPedido(): String
+}
+
+class ItemPedido {
+  - produto: Produto
+  - quantidade: int
+  - precoUnitario: double
+  + subtotal(): double
+}
+
+class Endereco {
+  - rua: String
+  - numero: String
+  - cidade: String
+  - cep: String
+  - complemento: String
+  + validar(): boolean
+}
+
+class FormaPagamento {
+  - id: int
+  - tipo: String
+  - valor: double
+  - status: String
+  + processarPagamento(): boolean
+}
+
+class Pagamento {
+  - id: int
+  - transacao: String
+  - status: String
+  - valor: double
+  + aprovar(): void
+  + recusar(): void
+}
+
+class Entrega {
+  - id: int
+  - pedido: Pedido
+  - status: String
+  - prazoEstimado: String
+  + acompanharEntrega(): String
+}
+
+class SistemaPagamento {
+  + processarTransacao(pagamento: FormaPagamento): boolean
+}
+
+class ServicoEntrega {
+  + agendarEntrega(pedido: Pedido, endereco: Endereco): Entrega
+  + acompanharEntrega(entrega: Entrega): String
+}
+
+Cliente "1" --> "1" Endereco
+Cliente "1" --> "1" Carrinho
+Cliente "1" --> "0..*" Pedido
+
+Carrinho "1" --> "0..*" ItemCarrinho
+ItemCarrinho "*" --> "1" Produto
+
+Pedido "1" --> "1" Endereco
+Pedido "1" --> "1" FormaPagamento
+Pedido "1" --> "1..*" ItemPedido
+Pedido "1" --> "1" Entrega
+
+ItemPedido "*" --> "1" Produto
+FormaPagamento "1" --> "1" Pagamento
+Pagamento --> SistemaPagamento
+Entrega --> ServicoEntrega
+
+@enduml

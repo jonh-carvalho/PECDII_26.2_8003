@@ -1,0 +1,70 @@
+@startuml uc
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+actor Cliente as cliente
+actor "Sistema de pagamento" as sistemaPagamento
+actor "Serviço de entrega" as servicoEntrega
+
+rectangle "Comprar produtos" {
+  usecase "Consultar catálogo" as UC01
+  usecase "Pesquisar produto" as UC02
+  usecase "Visualizar detalhes do produto" as UC03
+  usecase "Adicionar produto ao carrinho" as UC04
+  usecase "Revisar carrinho" as UC05
+  usecase "Iniciar checkout" as UC06
+  usecase "Informar endereço de entrega" as UC07
+  usecase "Escolher forma de pagamento" as UC08
+  usecase "Validar dados da compra" as UC09
+  usecase "Enviar transação ao pagamento" as UC10
+  usecase "Aprovar pagamento" as UC11
+  usecase "Registrar pedido" as UC12
+  usecase "Atualizar estoque" as UC13
+  usecase "Confirmar compra" as UC14
+  usecase "Acompanhar entrega" as UC15
+
+  usecase "Informar indisponibilidade" as UC16
+  usecase "Tentar outra forma de pagamento" as UC17
+  usecase "Solicitar correção dos dados" as UC18
+}
+
+cliente --> UC01
+cliente --> UC02
+cliente --> UC03
+cliente --> UC04
+cliente --> UC05
+cliente --> UC06
+cliente --> UC07
+cliente --> UC08
+cliente --> UC09
+cliente --> UC14
+cliente --> UC15
+
+sistemaPagamento --> UC10
+sistemaPagamento --> UC11
+sistemaPagamento --> UC17
+
+servicoEntrega --> UC15
+
+UC01 ..> UC02 : <<include>>
+UC03 ..> UC04 : <<include>>
+UC05 ..> UC06 : <<include>>
+UC06 ..> UC07 : <<include>>
+UC06 ..> UC08 : <<include>>
+UC09 ..> UC10 : <<include>>
+UC10 ..> UC11 : <<include>>
+UC11 ..> UC12 : <<include>>
+UC12 ..> UC13 : <<include>>
+UC12 ..> UC14 : <<include>>
+
+UC04 ..> UC16 : <<extend>>
+UC10 ..> UC17 : <<extend>>
+UC09 ..> UC18 : <<extend>>
+
+note right of UC16 : Se o produto estiver esgotado
+note right of UC17 : Se o pagamento for recusado
+note right of UC18 : Se os dados de entrega forem inválidos
+
+@enduml
