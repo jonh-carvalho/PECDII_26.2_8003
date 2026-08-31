@@ -3,7 +3,6 @@ id: pesquisa
 title: Pesquisa
 ---
 
-
 # Pesquisa
 ### **1. Capa**
 
