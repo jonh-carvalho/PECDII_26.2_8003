@@ -1,0 +1,42 @@
+class Garagem:
+
+	def __init__(self, capacidade: int):
+		if capacidade < 0:
+			raise ValueError("A capacidade não pode ser negativa")
+		self.capacidade = capacidade
+		self._veiculos = []
+
+	@property
+	def veiculos(self):
+		"""Retorna uma cópia dos veículos estacionados."""
+		return self._veiculos.copy()
+
+	def estacionar(self, veiculo: str) -> None:
+		if len(self._veiculos) >= self.capacidade:
+			raise ValueError("A garagem está cheia")
+		if not veiculo:
+			raise ValueError("O veículo deve ser informado")
+		self._veiculos.append(veiculo)
+
+	def retirar(self, veiculo: str) -> None:
+		try:
+			self._veiculos.remove(veiculo)
+		except ValueError as exc:
+			raise ValueError("Veículo não encontrado na garagem") from exc
+
+	def disponivel(self) -> int:
+		return self.capacidade - len(self._veiculos)
+
+
+# Java equivalente resumido:
+#
+# public class Garagem {
+#     private final int capacidade;
+#     private final List<String> veiculos = new ArrayList<>();
+#
+#     public Garagem(int capacidade) { this.capacidade = capacidade; }
+#     public void estacionar(String veiculo) { veiculos.add(veiculo); }
+#     public void retirar(String veiculo) { veiculos.remove(veiculo); }
+#     public int disponivel() { return capacidade - veiculos.size(); }
+# }
+

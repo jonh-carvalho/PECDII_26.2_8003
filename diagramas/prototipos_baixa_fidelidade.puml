@@ -1,0 +1,112 @@
+' Protótipos de baixa fidelidade em PlantUML SALT.
+
+@startsalt
+{
+  {+ <b>Portal acadêmico</b> | Aluno: Ana Souza | [Sair]}
+  { <b>Teste semestral - 2026/2</b>
+    "Descrição:" | Avaliação para composição de carga disciplinar
+    "Período:" | 01/09/2026 a 15/09/2026
+    "Situação:" | Disponível para inscrição
+  }
+  ---
+  { <b>Dados Pessoal - 2026/2</b>
+    "Matrícula:" | "202600123"
+    "Curso:" | "Engenharia de Software"
+    "Dados acadêmicos:" | "[x] Conferidos"
+  }
+  { [Realizar inscrição] | [Consultar regras] }
+}
+@endsalt
+
+@startsalt
+{
+  {+ <b>Confirmar inscrição</b>}
+  { "Aluno:" | Ana Souza
+    "Teste:" | Teste semestral - 2026/2
+    "Semestre:" | 2026/2
+    "Data:" | 10/09/2026
+  }
+  { "Declaração:" | [x] Confirmo que os dados estão corretos }
+  { [Confirmar inscrição] | [Voltar] }
+  { <b>Resultado da validação</b>
+    "Situação:" | Inscrição registrada com sucesso
+    "Protocolo:" | INS-2026-000123
+  }
+}
+@endsalt
+
+@startsalt
+{
+  {+ <b>Inscrição não concluída</b>}
+  { "Situação:" | [!] Pendência de duplicidade
+    "Motivo:" | Já existe uma inscrição para este teste no semestre 2026/2.
+  }
+  { "Ação permitida:" | Consultar inscrição existente }
+  { [Ver inscrição] | [Voltar] }
+}
+@endsalt
+
+@startsalt
+{
+  {+ <b>Resultado do teste</b> | Ana Souza}
+  { "Teste:" | Teste semestral - 2026/2
+    "Resultado:" | 8,5
+    "Status:" | Resultado disponível
+  }
+  { "Disciplina:" | ^Selecione uma disciplina^++
+    "Peso (0 a 1):" | "0,40"
+  }
+  { [Salvar associação] | [Voltar] }
+}
+@endsalt
+
+@startsalt
+{
+  {+ <b>Administração da oferta</b> | [Sair]}
+  { [Testes] | [Cursos] | [Disciplinas] | [Salas] | [Horários] }
+  { <b>Teste semestral - 2026/2</b>
+    "Curso:" | Engenharia de Software
+    "Disciplina:" | Algoritmos II
+    "Horário:" | Terça, 19:00 - 21:00
+    "Sala:" | LAB-02
+    "Capacidade:" | 30 alunos
+  }
+  { "Validação:" | [x] Teste [x] Curso [x] Disciplina
+                  | [x] Horário [x] Sala [x] Capacidade
+  }
+  { [Salvar oferta] | [Iniciar alocação] }
+}
+@endsalt
+
+@startsalt
+{
+  {+ <b>Alocação de alunos</b> | Teste 2026/2}
+  { "Curso" | "Horário" | "Sala" | "Ocupação" | "Situação"
+    "Eng. Software" | Ter 19:00 | LAB-02 | 24 / 30 | OK
+    "Eng. Software" | Qui 19:00 | LAB-03 | 30 / 30 | Lotada
+    "Sistemas" | Ter 19:00 | LAB-01 | 18 / 25 | Conflito
+  }
+  { "Alunos pendentes:" | 2
+    "Alunos alocados:" | 24
+    "Vagas disponíveis:" | 6
+  }
+  { [Executar alocação] | [Ver pendências] | [Exportar resultado] }
+}
+@endsalt
+
+@startsalt
+{
+  {+ <b>Pendências da alocação</b> | [Voltar ao painel]}
+  { "Aluno / registro" | "Motivo" | "Ação"
+    "Ana Souza" | Dados acadêmicos incompletos | Corrigir cadastro
+    "Bruno Lima" | Capacidade insuficiente | Disponibilizar outra sala
+    "Carla Reis" | Conflito de horário | Revisar oferta
+  }
+  { <b>Alocação automática bloqueada</b>
+    "Regra:" | Todas as pendências devem ser resolvidas antes da conclusão.
+    "Status:" | [!] Aguardando correção do administrador
+  }
+  { [Corrigir pendência selecionada] | [Atualizar validação] }
+}
+@endsalt
+
