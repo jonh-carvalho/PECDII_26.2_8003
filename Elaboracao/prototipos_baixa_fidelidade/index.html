@@ -1,0 +1,1455 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+        <link rel="prev" href="../diagrama_de_sequencia/">
+      
+      
+        <link rel="next" href="../../Construcao/">
+      
+      
+      <link rel="icon" href="../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Protótipos de Baixa Fidelidade - PECD_26.2_8003</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prototipos-de-baixa-fidelidade" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PECD_26.2_8003" class="md-header__button md-logo" aria-label="PECD_26.2_8003" data-md-component="logo">
+      
+  <img src="../../assets/Ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PECD_26.2_8003
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protótipos de Baixa Fidelidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PECD_26.2_8003" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Disciplina/aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Elaboração
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Construcao/" class="md-tabs__link">
+          
+  
+    
+  
+  Construção
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Transicao/" class="md-tabs__link">
+          
+  
+    
+  
+  Transição
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Disciplina/Bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PECD_26.2_8003" class="md-nav__button md-logo" aria-label="PECD_26.2_8003" data-md-component="logo">
+      
+  <img src="../../assets/Ibmec_logo.png" alt="logo">
+
+    </a>
+    PECD_26.2_8003
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PECD_26.2_8003" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/avaliacoes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/ambiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ambiente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/pesquisa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pesquisa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/cenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/5w2h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5w2h
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/Brainstorm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brainstorming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/mapa_mental/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa Mental
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/prototipo_baixa_fidelidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prototipagem Baixa Fidelidade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../levreq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casos_de_uso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrama_de_classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrama_de_sequencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Sequência
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Protótipos de Baixa Fidelidade
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Protótipos de Baixa Fidelidade
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-do-aluno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo do aluno
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxo do aluno">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inicio-e-inscricao-no-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Início e inscrição no teste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-confirmacao-e-impedimento-de-duplicidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Confirmação e impedimento de duplicidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resultado-e-associacao-do-peso" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Resultado e associação do peso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-do-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo do administrador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxo do administrador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-cadastro-da-oferta-e-validacao-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cadastro da oferta e validação dos dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-alocacao-por-curso-horario-e-capacidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Alocação por curso, horário e capacidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-pendencias-que-impedem-a-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Pendências que impedem a conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-representadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras representadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonte-editavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonte editável
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Construcao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Construção
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Construção
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Construcao/github_workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Construcao/github_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Construcao/codespace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CodeSpace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Transicao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Transição
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Transição
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/Bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="prototipos-de-baixa-fidelidade">Protótipos de Baixa Fidelidade<a class="headerlink" href="#prototipos-de-baixa-fidelidade" title="Permanent link">&para;</a></h1>
+<p>Os protótipos abaixo representam o fluxo de inscrição, avaliação, associação de peso e alocação definido no <a href="../../diagramas/cenario.md">cenário operacional</a>. Eles priorizam o conteúdo e as regras de negócio, sem definir cores, identidade visual ou detalhes finais de interação.</p>
+<h2 id="fluxo-do-aluno">Fluxo do aluno<a class="headerlink" href="#fluxo-do-aluno" title="Permanent link">&para;</a></h2>
+<h3 id="1-inicio-e-inscricao-no-teste">1. Início e inscrição no teste<a class="headerlink" href="#1-inicio-e-inscricao-no-teste" title="Permanent link">&para;</a></h3>
+<p>A tela permite ao aluno consultar o teste do semestre e iniciar uma única inscrição.</p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:470px;height:192px;background:#FFFFFF;" width="470px" height="192px" viewBox="0 0 470 192" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="117.094" font-weight="700">Portal acadêmico</text><text x="126.094" y="18.139" fill="#000" font-size="12" textLength="105.152">Aluno: Ana Souza</text><rect x="235.746" y="9.5" width="36" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="242.127" y="22.639" fill="#000" font-size="12" textLength="23.238">Sair</text><line x1="6" y1="6" x2="125.094" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="125.094" y1="30.969" x2="232.246" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="125.094" y1="6" x2="232.246" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="232.246" y1="30.969" x2="275.246" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="232.246" y1="6" x2="275.246" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="30.969" x2="125.094" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="275.246" y1="6" x2="275.246" y2="30.969" style="stroke:#000;stroke-width:1;"/><text x="7" y="45.107" fill="#000" font-size="12" textLength="167.918" font-weight="700">Teste semestral - 2026/2</text><text x="10" y="61.076" fill="#000" font-size="12" textLength="63.076">Descrição:</text><line x1="8" y1="63.906" x2="91" y2="63.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="60.906" x2="8" y2="62.906" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="60.906" x2="91" y2="62.906" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="61.076" fill="#000" font-size="12" textLength="285.943">Avaliação para composição de carga disciplinar</text><text x="10" y="79.045" fill="#000" font-size="12" textLength="49.23">Período:</text><line x1="8" y1="81.875" x2="75" y2="81.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="78.875" x2="8" y2="80.875" style="stroke:#000;stroke-width:1;"/><line x1="75" y1="78.875" x2="75" y2="80.875" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="79.045" fill="#000" font-size="12" textLength="153.311">01/09/2026 a 15/09/2026</text><text x="10" y="97.014" fill="#000" font-size="12" textLength="55.951">Situação:</text><line x1="8" y1="99.844" x2="83" y2="99.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="96.844" x2="8" y2="98.844" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="96.844" x2="83" y2="98.844" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="97.014" fill="#000" font-size="12" textLength="150.779">Disponível para inscrição</text><text x="10" y="116.982" fill="#000" font-size="12" textLength="59.613">Matrícula:</text><line x1="8" y1="119.813" x2="91" y2="119.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="116.813" x2="8" y2="118.813" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="116.813" x2="91" y2="118.813" style="stroke:#000;stroke-width:1;"/><text x="154" y="116.982" fill="#000" font-size="12" textLength="68.713">202600123</text><line x1="152" y1="119.813" x2="227" y2="119.813" style="stroke:#000;stroke-width:1;"/><line x1="152" y1="116.813" x2="152" y2="118.813" style="stroke:#000;stroke-width:1;"/><line x1="227" y1="116.813" x2="227" y2="118.813" style="stroke:#000;stroke-width:1;"/><text x="10" y="134.951" fill="#000" font-size="12" textLength="38.555">Curso:</text><line x1="8" y1="137.781" x2="59" y2="137.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="134.781" x2="8" y2="136.781" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="134.781" x2="59" y2="136.781" style="stroke:#000;stroke-width:1;"/><text x="154" y="134.951" fill="#000" font-size="12" textLength="144.375">Engenharia de Software</text><line x1="152" y1="137.781" x2="331" y2="137.781" style="stroke:#000;stroke-width:1;"/><line x1="152" y1="134.781" x2="152" y2="136.781" style="stroke:#000;stroke-width:1;"/><line x1="331" y1="134.781" x2="331" y2="136.781" style="stroke:#000;stroke-width:1;"/><text x="10" y="152.92" fill="#000" font-size="12" textLength="117.182">Dados acadêmicos:</text><line x1="8" y1="155.75" x2="147" y2="155.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="152.75" x2="8" y2="154.75" style="stroke:#000;stroke-width:1;"/><line x1="147" y1="152.75" x2="147" y2="154.75" style="stroke:#000;stroke-width:1;"/><text x="154" y="152.92" fill="#000" font-size="12" textLength="84.691">[x] Conferidos</text><line x1="152" y1="155.75" x2="267" y2="155.75" style="stroke:#000;stroke-width:1;"/><line x1="152" y1="152.75" x2="152" y2="154.75" style="stroke:#000;stroke-width:1;"/><line x1="267" y1="152.75" x2="267" y2="154.75" style="stroke:#000;stroke-width:1;"/><rect x="9.5" y="164.25" width="148" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="30.754" y="177.389" fill="#000" font-size="12" textLength="105.492">Realizar inscrição</text><rect x="164.5" y="164.25" width="132" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="180.602" y="177.389" fill="#000" font-size="12" textLength="99.797">Consultar regras</text><?plantuml-src LP7DQW8n4CVl-nH3hgNkHp-W8g9eZmNfzYOUncoqWPWiawmjMf-cXqB1fzWNQxAfhLuI9lEVttyoCx8EoLbKBjad0FihVm0CbiEP8OSAa6FLVcyaDuDqEOGF6Aj6cpwCDK9fcXtwftc9aXQ-y1089y2Bi4w05Hj_aoTTGv4LzsaHE9s6JONb9DklzjFqMK1lKKdiOgYH4BZPrCP61LG2ED8QePAMorf9ZHGvCq7jqLGHakLfzf06Aq38xqv1L9RIDVXlE9MsDhezReMAXbB_TNJn7VQ4pdlmHc5No08oo_BYXiNyf24RcUnHhuL-HP8OMYxDohqXYL_T52jZpuPgOytyVG4JerU2fC-p2-_vi_1ZsI6TTxS8O_SLjb5-Vq1YJMZZ2Wx9IEYgssYIzqAZlOUbS7Zx0m00?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:470px;height:192px;background:#FFFFFF;" width="470px" height="192px" viewBox="0 0 470 192" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="117.094" font-weight="700">Portal acadêmico</text><text x="126.094" y="18.139" fill="#000" font-size="12" textLength="105.152">Aluno: Ana Souza</text><rect x="235.746" y="9.5" width="36" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="242.127" y="22.639" fill="#000" font-size="12" textLength="23.238">Sair</text><line x1="6" y1="6" x2="125.094" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="125.094" y1="30.969" x2="232.246" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="125.094" y1="6" x2="232.246" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="232.246" y1="30.969" x2="275.246" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="232.246" y1="6" x2="275.246" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="30.969" x2="125.094" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="275.246" y1="6" x2="275.246" y2="30.969" style="stroke:#000;stroke-width:1;"/><text x="7" y="45.107" fill="#000" font-size="12" textLength="167.918" font-weight="700">Teste semestral - 2026/2</text><text x="10" y="61.076" fill="#000" font-size="12" textLength="63.076">Descrição:</text><line x1="8" y1="63.906" x2="91" y2="63.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="60.906" x2="8" y2="62.906" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="60.906" x2="91" y2="62.906" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="61.076" fill="#000" font-size="12" textLength="285.943">Avaliação para composição de carga disciplinar</text><text x="10" y="79.045" fill="#000" font-size="12" textLength="49.23">Período:</text><line x1="8" y1="81.875" x2="75" y2="81.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="78.875" x2="8" y2="80.875" style="stroke:#000;stroke-width:1;"/><line x1="75" y1="78.875" x2="75" y2="80.875" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="79.045" fill="#000" font-size="12" textLength="153.311">01/09/2026 a 15/09/2026</text><text x="10" y="97.014" fill="#000" font-size="12" textLength="55.951">Situação:</text><line x1="8" y1="99.844" x2="83" y2="99.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="96.844" x2="8" y2="98.844" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="96.844" x2="83" y2="98.844" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="97.014" fill="#000" font-size="12" textLength="150.779">Disponível para inscrição</text><text x="10" y="116.982" fill="#000" font-size="12" textLength="59.613">Matrícula:</text><line x1="8" y1="119.813" x2="91" y2="119.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="116.813" x2="8" y2="118.813" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="116.813" x2="91" y2="118.813" style="stroke:#000;stroke-width:1;"/><text x="154" y="116.982" fill="#000" font-size="12" textLength="68.713">202600123</text><line x1="152" y1="119.813" x2="227" y2="119.813" style="stroke:#000;stroke-width:1;"/><line x1="152" y1="116.813" x2="152" y2="118.813" style="stroke:#000;stroke-width:1;"/><line x1="227" y1="116.813" x2="227" y2="118.813" style="stroke:#000;stroke-width:1;"/><text x="10" y="134.951" fill="#000" font-size="12" textLength="38.555">Curso:</text><line x1="8" y1="137.781" x2="59" y2="137.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="134.781" x2="8" y2="136.781" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="134.781" x2="59" y2="136.781" style="stroke:#000;stroke-width:1;"/><text x="154" y="134.951" fill="#000" font-size="12" textLength="144.375">Engenharia de Software</text><line x1="152" y1="137.781" x2="331" y2="137.781" style="stroke:#000;stroke-width:1;"/><line x1="152" y1="134.781" x2="152" y2="136.781" style="stroke:#000;stroke-width:1;"/><line x1="331" y1="134.781" x2="331" y2="136.781" style="stroke:#000;stroke-width:1;"/><text x="10" y="152.92" fill="#000" font-size="12" textLength="117.182">Dados acadêmicos:</text><line x1="8" y1="155.75" x2="147" y2="155.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="152.75" x2="8" y2="154.75" style="stroke:#000;stroke-width:1;"/><line x1="147" y1="152.75" x2="147" y2="154.75" style="stroke:#000;stroke-width:1;"/><text x="154" y="152.92" fill="#000" font-size="12" textLength="84.691">[x] Conferidos</text><line x1="152" y1="155.75" x2="267" y2="155.75" style="stroke:#000;stroke-width:1;"/><line x1="152" y1="152.75" x2="152" y2="154.75" style="stroke:#000;stroke-width:1;"/><line x1="267" y1="152.75" x2="267" y2="154.75" style="stroke:#000;stroke-width:1;"/><rect x="9.5" y="164.25" width="148" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="30.754" y="177.389" fill="#000" font-size="12" textLength="105.492">Realizar inscrição</text><rect x="164.5" y="164.25" width="132" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="180.602" y="177.389" fill="#000" font-size="12" textLength="99.797">Consultar regras</text><?plantuml-src LP7DQW8n4CVl-nH3hgNkHp-W8g9eZmNfzYOUncoqWPWiawmjMf-cXqB1fzWNQxAfhLuI9lEVttyoCx8EoLbKBjad0FihVm0CbiEP8OSAa6FLVcyaDuDqEOGF6Aj6cpwCDK9fcXtwftc9aXQ-y1089y2Bi4w05Hj_aoTTGv4LzsaHE9s6JONb9DklzjFqMK1lKKdiOgYH4BZPrCP61LG2ED8QePAMorf9ZHGvCq7jqLGHakLfzf06Aq38xqv1L9RIDVXlE9MsDhezReMAXbB_TNJn7VQ4pdlmHc5No08oo_BYXiNyf24RcUnHhuL-HP8OMYxDohqXYL_T52jZpuPgOytyVG4JerU2fC-p2-_vi_1ZsI6TTxS8O_SLjb5-Vq1YJMZZ2Wx9IEYgssYIzqAZlOUbS7Zx0m00?></g></svg></div></div>
+
+<h3 id="2-confirmacao-e-impedimento-de-duplicidade">2. Confirmação e impedimento de duplicidade<a class="headerlink" href="#2-confirmacao-e-impedimento-de-duplicidade" title="Permanent link">&para;</a></h3>
+<p>A confirmação mostra os dados que serão gravados. A mesma área também comunica a pendência quando já existe inscrição para o teste e semestre.</p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:373px;height:203px;background:#FFFFFF;" width="373px" height="203px" viewBox="0 0 373 203" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="131.941" font-weight="700">Confirmar inscrição</text><line x1="6" y1="6" x2="139.941" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="139.941" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="139.941" y1="6" x2="139.941" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="38.139">Aluno:</text><line x1="8" y1="38.938" x2="59" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="35.938" x2="59" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="87" y="36.107" fill="#000" font-size="12" textLength="63.199">Ana Souza</text><text x="10" y="54.076" fill="#000" font-size="12" textLength="37.096">Teste:</text><line x1="8" y1="56.906" x2="59" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="53.906" x2="59" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="87" y="54.076" fill="#000" font-size="12" textLength="150.328">Teste semestral - 2026/2</text><text x="10" y="72.045" fill="#000" font-size="12" textLength="61.389">Semestre:</text><line x1="8" y1="74.875" x2="83" y2="74.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="71.875" x2="8" y2="73.875" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="71.875" x2="83" y2="73.875" style="stroke:#000;stroke-width:1;"/><text x="87" y="72.045" fill="#000" font-size="12" textLength="42.217">2026/2</text><text x="10" y="90.014" fill="#000" font-size="12" textLength="32.695">Data:</text><line x1="8" y1="92.844" x2="51" y2="92.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="89.844" x2="8" y2="91.844" style="stroke:#000;stroke-width:1;"/><line x1="51" y1="89.844" x2="51" y2="91.844" style="stroke:#000;stroke-width:1;"/><text x="87" y="90.014" fill="#000" font-size="12" textLength="69.164">10/09/2026</text><text x="10" y="109.982" fill="#000" font-size="12" textLength="71.531">Declaração:</text><line x1="8" y1="112.813" x2="99" y2="112.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="109.813" x2="8" y2="111.813" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="109.813" x2="99" y2="111.813" style="stroke:#000;stroke-width:1;"/><text x="103" y="109.982" fill="#000" font-size="12" textLength="249.105">[x] Confirmo que os dados estão corretos</text><rect x="9.5" y="121.313" width="156" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="29.021" y="134.451" fill="#000" font-size="12" textLength="116.959">Confirmar inscrição</text><rect x="172.5" y="121.313" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="180.562" y="134.451" fill="#000" font-size="12" textLength="35.877">Voltar</text><text x="7" y="156.92" fill="#000" font-size="12" textLength="157.178" font-weight="700">Resultado da validação</text><text x="10" y="172.889" fill="#000" font-size="12" textLength="55.951">Situação:</text><line x1="8" y1="175.719" x2="83" y2="175.719" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="172.719" x2="8" y2="174.719" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="172.719" x2="83" y2="174.719" style="stroke:#000;stroke-width:1;"/><text x="166.178" y="172.889" fill="#000" font-size="12" textLength="199.793">Inscrição registrada com sucesso</text><text x="10" y="190.857" fill="#000" font-size="12" textLength="60.217">Protocolo:</text><line x1="8" y1="193.688" x2="91" y2="193.688" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="190.688" x2="8" y2="192.688" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="190.688" x2="91" y2="192.688" style="stroke:#000;stroke-width:1;"/><text x="166.178" y="190.857" fill="#000" font-size="12" textLength="105.141">INS-2026-000123</text><?plantuml-src RL71IWCn4BtlLmozodQpgmYLKbhinOk8ArvA3xFPA87i3cOI4Mk_neCVqXypoHRS1Iz9cFVcpPkNDJkqZj6ux90172x20R1iLhVKlsZReGNTixJwz7FwfcNHh0BX69c9EDiOtzFD3BvWqoFKv3zn09uKEvM0z09MNRWj6iYX4jLrKGsyUgWFr36mHOUfM8f2B8e8JKTlbJHeCHbBnDt77iws2Twy0c9eiGrdc1188CbQvOWdEhj_Dzr7lMSo8PtzX1wYULJi0z1IK8TtDBh5SJfnAUtyoDZTdovOzQfZ3g5LKWVifMAceUt1aYD9vjnrN-Tnwrm8KLQNoSKnMwk-JT-LbVE8pXUDSdZr2m00?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:373px;height:203px;background:#FFFFFF;" width="373px" height="203px" viewBox="0 0 373 203" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="131.941" font-weight="700">Confirmar inscrição</text><line x1="6" y1="6" x2="139.941" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="139.941" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="139.941" y1="6" x2="139.941" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="38.139">Aluno:</text><line x1="8" y1="38.938" x2="59" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="35.938" x2="59" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="87" y="36.107" fill="#000" font-size="12" textLength="63.199">Ana Souza</text><text x="10" y="54.076" fill="#000" font-size="12" textLength="37.096">Teste:</text><line x1="8" y1="56.906" x2="59" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="53.906" x2="59" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="87" y="54.076" fill="#000" font-size="12" textLength="150.328">Teste semestral - 2026/2</text><text x="10" y="72.045" fill="#000" font-size="12" textLength="61.389">Semestre:</text><line x1="8" y1="74.875" x2="83" y2="74.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="71.875" x2="8" y2="73.875" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="71.875" x2="83" y2="73.875" style="stroke:#000;stroke-width:1;"/><text x="87" y="72.045" fill="#000" font-size="12" textLength="42.217">2026/2</text><text x="10" y="90.014" fill="#000" font-size="12" textLength="32.695">Data:</text><line x1="8" y1="92.844" x2="51" y2="92.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="89.844" x2="8" y2="91.844" style="stroke:#000;stroke-width:1;"/><line x1="51" y1="89.844" x2="51" y2="91.844" style="stroke:#000;stroke-width:1;"/><text x="87" y="90.014" fill="#000" font-size="12" textLength="69.164">10/09/2026</text><text x="10" y="109.982" fill="#000" font-size="12" textLength="71.531">Declaração:</text><line x1="8" y1="112.813" x2="99" y2="112.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="109.813" x2="8" y2="111.813" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="109.813" x2="99" y2="111.813" style="stroke:#000;stroke-width:1;"/><text x="103" y="109.982" fill="#000" font-size="12" textLength="249.105">[x] Confirmo que os dados estão corretos</text><rect x="9.5" y="121.313" width="156" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="29.021" y="134.451" fill="#000" font-size="12" textLength="116.959">Confirmar inscrição</text><rect x="172.5" y="121.313" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="180.562" y="134.451" fill="#000" font-size="12" textLength="35.877">Voltar</text><text x="7" y="156.92" fill="#000" font-size="12" textLength="157.178" font-weight="700">Resultado da validação</text><text x="10" y="172.889" fill="#000" font-size="12" textLength="55.951">Situação:</text><line x1="8" y1="175.719" x2="83" y2="175.719" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="172.719" x2="8" y2="174.719" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="172.719" x2="83" y2="174.719" style="stroke:#000;stroke-width:1;"/><text x="166.178" y="172.889" fill="#000" font-size="12" textLength="199.793">Inscrição registrada com sucesso</text><text x="10" y="190.857" fill="#000" font-size="12" textLength="60.217">Protocolo:</text><line x1="8" y1="193.688" x2="91" y2="193.688" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="190.688" x2="8" y2="192.688" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="190.688" x2="91" y2="192.688" style="stroke:#000;stroke-width:1;"/><text x="166.178" y="190.857" fill="#000" font-size="12" textLength="105.141">INS-2026-000123</text><?plantuml-src RL71IWCn4BtlLmozodQpgmYLKbhinOk8ArvA3xFPA87i3cOI4Mk_neCVqXypoHRS1Iz9cFVcpPkNDJkqZj6ux90172x20R1iLhVKlsZReGNTixJwz7FwfcNHh0BX69c9EDiOtzFD3BvWqoFKv3zn09uKEvM0z09MNRWj6iYX4jLrKGsyUgWFr36mHOUfM8f2B8e8JKTlbJHeCHbBnDt77iws2Twy0c9eiGrdc1188CbQvOWdEhj_Dzr7lMSo8PtzX1wYULJi0z1IK8TtDBh5SJfnAUtyoDZTdovOzQfZ3g5LKWVifMAceUt1aYD9vjnrN-Tnwrm8KLQNoSKnMwk-JT-LbVE8pXUDSdZr2m00?></g></svg></div></div>
+
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:456px;height:113px;background:#FFFFFF;" width="456px" height="113px" viewBox="0 0 456 113" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="158.461" font-weight="700">Inscrição não concluída</text><line x1="6" y1="6" x2="166.461" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="166.461" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="166.461" y1="6" x2="166.461" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="55.951">Situação:</text><line x1="8" y1="38.938" x2="83" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="35.938" x2="83" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="87" y="36.107" fill="#000" font-size="12" textLength="172.143">[!] Pendência de duplicidade</text><text x="10" y="54.076" fill="#000" font-size="12" textLength="44.221">Motivo:</text><line x1="8" y1="56.906" x2="67" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="67" y1="53.906" x2="67" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="87" y="54.076" fill="#000" font-size="12" textLength="361.746">Já existe uma inscrição para este teste no semestre 2026/2.</text><text x="10" y="74.045" fill="#000" font-size="12" textLength="95.326">Ação permitida:</text><line x1="8" y1="76.875" x2="131" y2="76.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="73.875" x2="8" y2="75.875" style="stroke:#000;stroke-width:1;"/><line x1="131" y1="73.875" x2="131" y2="75.875" style="stroke:#000;stroke-width:1;"/><text x="135" y="74.045" fill="#000" font-size="12" textLength="174.34">Consultar inscrição existente</text><rect x="9.5" y="85.375" width="108" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="24.655" y="98.514" fill="#000" font-size="12" textLength="77.689">Ver inscrição</text><rect x="124.5" y="85.375" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="132.562" y="98.514" fill="#000" font-size="12" textLength="35.877">Voltar</text><?plantuml-src LP31IWCn48Rl-nHZhuMjBY9KIgbuKYW8GYzb3xF970Psav9CH6ZxCCM38FWKUR4cMG_kvIUGxvz__jbuGISUUwcE5S1ndWHWrQrVZ5UEutVyic2oA6jK7-AlnjMYMoVidFc2pzvP0XRsSGOdsD-qy4P6nn-Z644Jw73eMR56JQDZQuK_HlerNe0-sGj1613uN_017GBb7obgB7WQqjCHDBVDmwAffuiy_Vd83ImfhWGyM-D3dtfEPe-HHcWoOR-Z2TRcEZkRtMq1pzKcDIi7g-xgl4Izx4Zm_We0?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:456px;height:113px;background:#FFFFFF;" width="456px" height="113px" viewBox="0 0 456 113" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="158.461" font-weight="700">Inscrição não concluída</text><line x1="6" y1="6" x2="166.461" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="166.461" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="166.461" y1="6" x2="166.461" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="55.951">Situação:</text><line x1="8" y1="38.938" x2="83" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="35.938" x2="83" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="87" y="36.107" fill="#000" font-size="12" textLength="172.143">[!] Pendência de duplicidade</text><text x="10" y="54.076" fill="#000" font-size="12" textLength="44.221">Motivo:</text><line x1="8" y1="56.906" x2="67" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="67" y1="53.906" x2="67" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="87" y="54.076" fill="#000" font-size="12" textLength="361.746">Já existe uma inscrição para este teste no semestre 2026/2.</text><text x="10" y="74.045" fill="#000" font-size="12" textLength="95.326">Ação permitida:</text><line x1="8" y1="76.875" x2="131" y2="76.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="73.875" x2="8" y2="75.875" style="stroke:#000;stroke-width:1;"/><line x1="131" y1="73.875" x2="131" y2="75.875" style="stroke:#000;stroke-width:1;"/><text x="135" y="74.045" fill="#000" font-size="12" textLength="174.34">Consultar inscrição existente</text><rect x="9.5" y="85.375" width="108" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="24.655" y="98.514" fill="#000" font-size="12" textLength="77.689">Ver inscrição</text><rect x="124.5" y="85.375" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="132.562" y="98.514" fill="#000" font-size="12" textLength="35.877">Voltar</text><?plantuml-src LP31IWCn48Rl-nHZhuMjBY9KIgbuKYW8GYzb3xF970Psav9CH6ZxCCM38FWKUR4cMG_kvIUGxvz__jbuGISUUwcE5S1ndWHWrQrVZ5UEutVyic2oA6jK7-AlnjMYMoVidFc2pzvP0XRsSGOdsD-qy4P6nn-Z644Jw73eMR56JQDZQuK_HlerNe0-sGj1613uN_017GBb7obgB7WQqjCHDBVDmwAffuiy_Vd83ImfhWGyM-D3dtfEPe-HHcWoOR-Z2TRcEZkRtMq1pzKcDIi7g-xgl4Izx4Zm_We0?></g></svg></div></div>
+
+<h3 id="3-resultado-e-associacao-do-peso">3. Resultado e associação do peso<a class="headerlink" href="#3-resultado-e-associacao-do-peso" title="Permanent link">&para;</a></h3>
+<p>Depois da divulgação do resultado, o aluno escolhe uma disciplina e informa um peso no intervalo de 0 a 1.</p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:459px;height:219px;background:#FFFFFF;" width="459px" height="219px" viewBox="0 0 459 219" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="127.928" font-weight="700">Resultado do teste</text><text x="136.928" y="18.139" fill="#000" font-size="12" textLength="63.199">Ana Souza</text><line x1="6" y1="6" x2="135.928" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="135.928" y1="21.969" x2="201.127" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="135.928" y1="6" x2="201.127" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="135.928" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="201.127" y1="6" x2="201.127" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="37.096">Teste:</text><line x1="8" y1="38.938" x2="59" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="35.938" x2="59" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="95" y="36.107" fill="#000" font-size="12" textLength="150.328">Teste semestral - 2026/2</text><text x="10" y="54.076" fill="#000" font-size="12" textLength="63.973">Resultado:</text><line x1="8" y1="56.906" x2="91" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="53.906" x2="91" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="95" y="54.076" fill="#000" font-size="12" textLength="19.084">8,5</text><text x="10" y="72.045" fill="#000" font-size="12" textLength="42.281">Status:</text><line x1="8" y1="74.875" x2="67" y2="74.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="71.875" x2="8" y2="73.875" style="stroke:#000;stroke-width:1;"/><line x1="67" y1="71.875" x2="67" y2="73.875" style="stroke:#000;stroke-width:1;"/><text x="95" y="72.045" fill="#000" font-size="12" textLength="124.664">Resultado disponível</text><text x="10" y="92.014" fill="#000" font-size="12" textLength="186.727">Disciplina para receber o peso:</text><line x1="8" y1="94.844" x2="259" y2="94.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="91.844" x2="8" y2="93.844" style="stroke:#000;stroke-width:1;"/><line x1="259" y1="91.844" x2="259" y2="93.844" style="stroke:#000;stroke-width:1;"/><text x="263" y="92.014" fill="#000" font-size="12" textLength="188.854">^Selecione uma disciplina^++</text><text x="10" y="109.982" fill="#000" font-size="12" textLength="62.045">Disciplina:</text><line x1="8" y1="112.813" x2="99" y2="112.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="109.813" x2="8" y2="111.813" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="109.813" x2="99" y2="111.813" style="stroke:#000;stroke-width:1;"/><text x="283" y="109.982" fill="#000" font-size="12" textLength="75.65">Algoritmos II</text><rect x="265" y="100.828" width="10" height="10" fill="none" style="stroke:#000;stroke-width:1.5;"/><text x="27" y="127.951" fill="#000" font-size="12" textLength="97.564">Banco de Dados</text><rect x="9" y="118.797" width="10" height="10" fill="none" style="stroke:#000;stroke-width:1.5;"/><text x="27" y="143.92" fill="#000" font-size="12" textLength="153.164">Engenharia de Requisitos</text><rect x="9" y="134.766" width="10" height="10" fill="none" style="stroke:#000;stroke-width:1.5;"/><text x="10" y="159.889" fill="#000" font-size="12" textLength="75.686">Peso (0 a 1):</text><line x1="8" y1="162.719" x2="115" y2="162.719" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="159.719" x2="8" y2="161.719" style="stroke:#000;stroke-width:1;"/><line x1="115" y1="159.719" x2="115" y2="161.719" style="stroke:#000;stroke-width:1;"/><text x="266" y="159.889" fill="#000" font-size="12" textLength="26.719">0,40</text><line x1="264" y1="162.719" x2="299" y2="162.719" style="stroke:#000;stroke-width:1;"/><line x1="264" y1="159.719" x2="264" y2="161.719" style="stroke:#000;stroke-width:1;"/><line x1="299" y1="159.719" x2="299" y2="161.719" style="stroke:#000;stroke-width:1;"/><rect x="9.5" y="171.219" width="140" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="25.857" y="184.357" fill="#000" font-size="12" textLength="107.285">Salvar associação</text><rect x="156.5" y="171.219" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="164.562" y="184.357" fill="#000" font-size="12" textLength="35.877">Voltar</text><text x="10" y="206.826" fill="#000" font-size="12" textLength="62.537">Validação:</text><line x1="8" y1="209.656" x2="91" y2="209.656" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="206.656" x2="8" y2="208.656" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="206.656" x2="91" y2="208.656" style="stroke:#000;stroke-width:1;"/><text x="95" y="206.826" fill="#000" font-size="12" textLength="243.504">O peso deve estar entre 0 e 1, inclusive.</text><?plantuml-src VPB1JW8n48Rl-nIJFMd0PI5er1021W-SDApXGY2PNIROfBHhfxi7aQVnuCcduCLikyI89cwQRTDy_pz_fnsnHMCPfOrs4S2kvNu0Wtmu8wwanRK6DoonfK4d7y8RZ1L2fgjNTEJUIu8YVlB8RUo0i0AchPiDIhY0NjgxwlGQxjitiDVjosOxisWh3di_AWikjJfyrYHFYqq45wAKmaKfqI0OAYWd0nfAuiPvbP6aGcX5K6tHMnqLgrRhjqaGB609OxdHHjYjPfXE0_NdQy0xL8NBHp1nEVa_ybvjI3sZ4UZn6RrKWeKzQk975nVEKa3edeSKSThkf_79QHSPoXeD8BCk11u-3kzwwTtdshN9B4zRCqSfrWqK31z2Irpjce3yPGCfQmXI8EYsGQX2LYngIeBDFXgHMeVd47KJVs_9JKuM-ry0?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:459px;height:219px;background:#FFFFFF;" width="459px" height="219px" viewBox="0 0 459 219" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="127.928" font-weight="700">Resultado do teste</text><text x="136.928" y="18.139" fill="#000" font-size="12" textLength="63.199">Ana Souza</text><line x1="6" y1="6" x2="135.928" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="135.928" y1="21.969" x2="201.127" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="135.928" y1="6" x2="201.127" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="135.928" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="201.127" y1="6" x2="201.127" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="37.096">Teste:</text><line x1="8" y1="38.938" x2="59" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="35.938" x2="59" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="95" y="36.107" fill="#000" font-size="12" textLength="150.328">Teste semestral - 2026/2</text><text x="10" y="54.076" fill="#000" font-size="12" textLength="63.973">Resultado:</text><line x1="8" y1="56.906" x2="91" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="53.906" x2="91" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="95" y="54.076" fill="#000" font-size="12" textLength="19.084">8,5</text><text x="10" y="72.045" fill="#000" font-size="12" textLength="42.281">Status:</text><line x1="8" y1="74.875" x2="67" y2="74.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="71.875" x2="8" y2="73.875" style="stroke:#000;stroke-width:1;"/><line x1="67" y1="71.875" x2="67" y2="73.875" style="stroke:#000;stroke-width:1;"/><text x="95" y="72.045" fill="#000" font-size="12" textLength="124.664">Resultado disponível</text><text x="10" y="92.014" fill="#000" font-size="12" textLength="186.727">Disciplina para receber o peso:</text><line x1="8" y1="94.844" x2="259" y2="94.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="91.844" x2="8" y2="93.844" style="stroke:#000;stroke-width:1;"/><line x1="259" y1="91.844" x2="259" y2="93.844" style="stroke:#000;stroke-width:1;"/><text x="263" y="92.014" fill="#000" font-size="12" textLength="188.854">^Selecione uma disciplina^++</text><text x="10" y="109.982" fill="#000" font-size="12" textLength="62.045">Disciplina:</text><line x1="8" y1="112.813" x2="99" y2="112.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="109.813" x2="8" y2="111.813" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="109.813" x2="99" y2="111.813" style="stroke:#000;stroke-width:1;"/><text x="283" y="109.982" fill="#000" font-size="12" textLength="75.65">Algoritmos II</text><rect x="265" y="100.828" width="10" height="10" fill="none" style="stroke:#000;stroke-width:1.5;"/><text x="27" y="127.951" fill="#000" font-size="12" textLength="97.564">Banco de Dados</text><rect x="9" y="118.797" width="10" height="10" fill="none" style="stroke:#000;stroke-width:1.5;"/><text x="27" y="143.92" fill="#000" font-size="12" textLength="153.164">Engenharia de Requisitos</text><rect x="9" y="134.766" width="10" height="10" fill="none" style="stroke:#000;stroke-width:1.5;"/><text x="10" y="159.889" fill="#000" font-size="12" textLength="75.686">Peso (0 a 1):</text><line x1="8" y1="162.719" x2="115" y2="162.719" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="159.719" x2="8" y2="161.719" style="stroke:#000;stroke-width:1;"/><line x1="115" y1="159.719" x2="115" y2="161.719" style="stroke:#000;stroke-width:1;"/><text x="266" y="159.889" fill="#000" font-size="12" textLength="26.719">0,40</text><line x1="264" y1="162.719" x2="299" y2="162.719" style="stroke:#000;stroke-width:1;"/><line x1="264" y1="159.719" x2="264" y2="161.719" style="stroke:#000;stroke-width:1;"/><line x1="299" y1="159.719" x2="299" y2="161.719" style="stroke:#000;stroke-width:1;"/><rect x="9.5" y="171.219" width="140" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="25.857" y="184.357" fill="#000" font-size="12" textLength="107.285">Salvar associação</text><rect x="156.5" y="171.219" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="164.562" y="184.357" fill="#000" font-size="12" textLength="35.877">Voltar</text><text x="10" y="206.826" fill="#000" font-size="12" textLength="62.537">Validação:</text><line x1="8" y1="209.656" x2="91" y2="209.656" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="206.656" x2="8" y2="208.656" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="206.656" x2="91" y2="208.656" style="stroke:#000;stroke-width:1;"/><text x="95" y="206.826" fill="#000" font-size="12" textLength="243.504">O peso deve estar entre 0 e 1, inclusive.</text><?plantuml-src VPB1JW8n48Rl-nIJFMd0PI5er1021W-SDApXGY2PNIROfBHhfxi7aQVnuCcduCLikyI89cwQRTDy_pz_fnsnHMCPfOrs4S2kvNu0Wtmu8wwanRK6DoonfK4d7y8RZ1L2fgjNTEJUIu8YVlB8RUo0i0AchPiDIhY0NjgxwlGQxjitiDVjosOxisWh3di_AWikjJfyrYHFYqq45wAKmaKfqI0OAYWd0nfAuiPvbP6aGcX5K6tHMnqLgrRhjqaGB609OxdHHjYjPfXE0_NdQy0xL8NBHp1nEVa_ybvjI3sZ4UZn6RrKWeKzQk975nVEKa3edeSKSThkf_79QHSPoXeD8BCk11u-3kzwwTtdshN9B4zRCqSfrWqK31z2Irpjce3yPGCfQmXI8EYsGQX2LYngIeBDFXgHMeVd47KJVs_9JKuM-ry0?></g></svg></div></div>
+
+<h2 id="fluxo-do-administrador">Fluxo do administrador<a class="headerlink" href="#fluxo-do-administrador" title="Permanent link">&para;</a></h2>
+<h3 id="4-cadastro-da-oferta-e-validacao-dos-dados">4. Cadastro da oferta e validação dos dados<a class="headerlink" href="#4-cadastro-da-oferta-e-validacao-dos-dados" title="Permanent link">&para;</a></h3>
+<p>O administrador mantém os dados necessários antes de iniciar a alocação.</p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:435px;height:235px;background:#FFFFFF;" width="435px" height="235px" viewBox="0 0 435 235" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="163.898" font-weight="700">Administração da oferta</text><rect x="175.398" y="9.5" width="36" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="181.779" y="22.639" fill="#000" font-size="12" textLength="23.238">Sair</text><line x1="6" y1="6" x2="171.898" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="171.898" y1="30.969" x2="214.898" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="171.898" y1="6" x2="214.898" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="30.969" x2="171.898" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="214.898" y1="6" x2="214.898" y2="30.969" style="stroke:#000;stroke-width:1;"/><rect x="9.5" y="36.469" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="15.848" y="49.607" fill="#000" font-size="12" textLength="39.305">Testes</text><rect x="68.5" y="36.469" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="74.118" y="49.607" fill="#000" font-size="12" textLength="40.764">Cursos</text><rect x="127.5" y="36.469" width="92" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="141.373" y="49.607" fill="#000" font-size="12" textLength="64.254">Disciplinas</text><rect x="226.5" y="36.469" width="44" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="232.545" y="49.607" fill="#000" font-size="12" textLength="31.91">Salas</text><rect x="277.5" y="36.469" width="68" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="286.243" y="49.607" fill="#000" font-size="12" textLength="50.514">Horários</text><text x="7" y="72.076" fill="#000" font-size="12" textLength="167.918" font-weight="700">Teste semestral - 2026/2</text><text x="10" y="88.045" fill="#000" font-size="12" textLength="100.26">Curso vinculado:</text><line x1="8" y1="90.875" x2="139" y2="90.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="87.875" x2="8" y2="89.875" style="stroke:#000;stroke-width:1;"/><line x1="139" y1="87.875" x2="139" y2="89.875" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="88.045" fill="#000" font-size="12" textLength="144.375">Engenharia de Software</text><text x="10" y="106.014" fill="#000" font-size="12" textLength="62.045">Disciplina:</text><line x1="8" y1="108.844" x2="99" y2="108.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="105.844" x2="8" y2="107.844" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="105.844" x2="99" y2="107.844" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="106.014" fill="#000" font-size="12" textLength="75.65">Algoritmos II</text><text x="10" y="123.982" fill="#000" font-size="12" textLength="48.305">Horário:</text><line x1="8" y1="126.813" x2="75" y2="126.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="123.813" x2="8" y2="125.813" style="stroke:#000;stroke-width:1;"/><line x1="75" y1="123.813" x2="75" y2="125.813" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="123.982" fill="#000" font-size="12" textLength="122.35">Terça, 19:00 - 21:00</text><text x="10" y="141.951" fill="#000" font-size="12" textLength="29.701">Sala:</text><line x1="8" y1="144.781" x2="51" y2="144.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="141.781" x2="8" y2="143.781" style="stroke:#000;stroke-width:1;"/><line x1="51" y1="141.781" x2="51" y2="143.781" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="141.951" fill="#000" font-size="12" textLength="42.727">LAB-02</text><text x="10" y="159.92" fill="#000" font-size="12" textLength="74.648">Capacidade:</text><line x1="8" y1="162.75" x2="99" y2="162.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="159.75" x2="8" y2="161.75" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="159.75" x2="99" y2="161.75" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="159.92" fill="#000" font-size="12" textLength="58.576">30 alunos</text><text x="10" y="179.889" fill="#000" font-size="12" textLength="149.783">Validação dos cadastros:</text><line x1="8" y1="182.719" x2="203" y2="182.719" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="179.719" x2="8" y2="181.719" style="stroke:#000;stroke-width:1;"/><line x1="203" y1="179.719" x2="203" y2="181.719" style="stroke:#000;stroke-width:1;"/><text x="225.621" y="179.889" fill="#000" font-size="12" textLength="201.662">[x] Teste  [x] Curso  [x] Disciplina</text><text x="7" y="197.857" fill="#000" font-size="12" textLength="216.621">[x] Horário  [x] Sala  [x] Capacidade</text><rect x="9.5" y="207.188" width="108" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="24.775" y="220.326" fill="#000" font-size="12" textLength="77.449">Salvar oferta</text><rect x="124.5" y="207.188" width="132" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="143.607" y="220.326" fill="#000" font-size="12" textLength="93.785">Iniciar alocação</text><?plantuml-src VLBBRi8m4BpdArPSMo2aLIKGGj27LAJUGBqW3ajiw4h6HhQXbIWVK_N0X-J7Qgy3Y4jpI3RPsPdPZ8VEe_KEbS_s6S3-9jm0-el1IAn9a_CMgsFrQq0WcAMq7lljnG2-OJP1ilE0FiGndffDfVFIpMFtQMkTIUKpkP8sYZIczmcgkderjlgn571NF46TcS39jOmE53IXo8k7TX756TDW0TYHBhSAXUar0k6BNadzWPOGX8I9MVfFj3BXBouOEb8hOyclZOFnE25ERhW_bROwuYrqkhqyZ_ATy4ouw9ynRwF7PbxKTd239GaKabjtEQ3QQkEk5ckyemgO-eS6wH85XWMDuw7PrnpIuboc3Rcyc6UU_wv4SzebZKV7DUVPvdLo0R53MoVCsOmrbHG-eJ9bSfn2EcH3gGKVcApJYgcqkWlfyVuF?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:435px;height:235px;background:#FFFFFF;" width="435px" height="235px" viewBox="0 0 435 235" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="163.898" font-weight="700">Administração da oferta</text><rect x="175.398" y="9.5" width="36" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="181.779" y="22.639" fill="#000" font-size="12" textLength="23.238">Sair</text><line x1="6" y1="6" x2="171.898" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="171.898" y1="30.969" x2="214.898" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="171.898" y1="6" x2="214.898" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="30.969" x2="171.898" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="214.898" y1="6" x2="214.898" y2="30.969" style="stroke:#000;stroke-width:1;"/><rect x="9.5" y="36.469" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="15.848" y="49.607" fill="#000" font-size="12" textLength="39.305">Testes</text><rect x="68.5" y="36.469" width="52" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="74.118" y="49.607" fill="#000" font-size="12" textLength="40.764">Cursos</text><rect x="127.5" y="36.469" width="92" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="141.373" y="49.607" fill="#000" font-size="12" textLength="64.254">Disciplinas</text><rect x="226.5" y="36.469" width="44" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="232.545" y="49.607" fill="#000" font-size="12" textLength="31.91">Salas</text><rect x="277.5" y="36.469" width="68" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="286.243" y="49.607" fill="#000" font-size="12" textLength="50.514">Horários</text><text x="7" y="72.076" fill="#000" font-size="12" textLength="167.918" font-weight="700">Teste semestral - 2026/2</text><text x="10" y="88.045" fill="#000" font-size="12" textLength="100.26">Curso vinculado:</text><line x1="8" y1="90.875" x2="139" y2="90.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="87.875" x2="8" y2="89.875" style="stroke:#000;stroke-width:1;"/><line x1="139" y1="87.875" x2="139" y2="89.875" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="88.045" fill="#000" font-size="12" textLength="144.375">Engenharia de Software</text><text x="10" y="106.014" fill="#000" font-size="12" textLength="62.045">Disciplina:</text><line x1="8" y1="108.844" x2="99" y2="108.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="105.844" x2="8" y2="107.844" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="105.844" x2="99" y2="107.844" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="106.014" fill="#000" font-size="12" textLength="75.65">Algoritmos II</text><text x="10" y="123.982" fill="#000" font-size="12" textLength="48.305">Horário:</text><line x1="8" y1="126.813" x2="75" y2="126.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="123.813" x2="8" y2="125.813" style="stroke:#000;stroke-width:1;"/><line x1="75" y1="123.813" x2="75" y2="125.813" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="123.982" fill="#000" font-size="12" textLength="122.35">Terça, 19:00 - 21:00</text><text x="10" y="141.951" fill="#000" font-size="12" textLength="29.701">Sala:</text><line x1="8" y1="144.781" x2="51" y2="144.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="141.781" x2="8" y2="143.781" style="stroke:#000;stroke-width:1;"/><line x1="51" y1="141.781" x2="51" y2="143.781" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="141.951" fill="#000" font-size="12" textLength="42.727">LAB-02</text><text x="10" y="159.92" fill="#000" font-size="12" textLength="74.648">Capacidade:</text><line x1="8" y1="162.75" x2="99" y2="162.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="159.75" x2="8" y2="161.75" style="stroke:#000;stroke-width:1;"/><line x1="99" y1="159.75" x2="99" y2="161.75" style="stroke:#000;stroke-width:1;"/><text x="176.918" y="159.92" fill="#000" font-size="12" textLength="58.576">30 alunos</text><text x="10" y="179.889" fill="#000" font-size="12" textLength="149.783">Validação dos cadastros:</text><line x1="8" y1="182.719" x2="203" y2="182.719" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="179.719" x2="8" y2="181.719" style="stroke:#000;stroke-width:1;"/><line x1="203" y1="179.719" x2="203" y2="181.719" style="stroke:#000;stroke-width:1;"/><text x="225.621" y="179.889" fill="#000" font-size="12" textLength="201.662">[x] Teste  [x] Curso  [x] Disciplina</text><text x="7" y="197.857" fill="#000" font-size="12" textLength="216.621">[x] Horário  [x] Sala  [x] Capacidade</text><rect x="9.5" y="207.188" width="108" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="24.775" y="220.326" fill="#000" font-size="12" textLength="77.449">Salvar oferta</text><rect x="124.5" y="207.188" width="132" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="143.607" y="220.326" fill="#000" font-size="12" textLength="93.785">Iniciar alocação</text><?plantuml-src VLBBRi8m4BpdArPSMo2aLIKGGj27LAJUGBqW3ajiw4h6HhQXbIWVK_N0X-J7Qgy3Y4jpI3RPsPdPZ8VEe_KEbS_s6S3-9jm0-el1IAn9a_CMgsFrQq0WcAMq7lljnG2-OJP1ilE0FiGndffDfVFIpMFtQMkTIUKpkP8sYZIczmcgkderjlgn571NF46TcS39jOmE53IXo8k7TX756TDW0TYHBhSAXUar0k6BNadzWPOGX8I9MVfFj3BXBouOEb8hOyclZOFnE25ERhW_bROwuYrqkhqyZ_ATy4ouw9ynRwF7PbxKTd239GaKabjtEQ3QQkEk5ckyemgO-eS6wH85XWMDuw7PrnpIuboc3Rcyc6UU_wv4SzebZKV7DUVPvdLo0R53MoVCsOmrbHG-eJ9bSfn2EcH3gGKVcApJYgcqkWlfyVuF?></g></svg></div></div>
+
+<h3 id="5-alocacao-por-curso-horario-e-capacidade">5. Alocação por curso, horário e capacidade<a class="headerlink" href="#5-alocacao-por-curso-horario-e-capacidade" title="Permanent link">&para;</a></h3>
+<p>O painel evidencia a capacidade utilizada e só permite concluir quando não há conflitos nem falta de vagas.</p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:438px;height:185px;background:#FFFFFF;" width="438px" height="185px" viewBox="0 0 438 185" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="130.078" font-weight="700">Alocação de alunos</text><text x="139.078" y="18.139" fill="#000" font-size="12" textLength="79.084">Teste 2026/2</text><line x1="6" y1="6" x2="138.078" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="138.078" y1="21.969" x2="219.162" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="138.078" y1="6" x2="219.162" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="138.078" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="219.162" y1="6" x2="219.162" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="34.512">Curso</text><line x1="8" y1="38.938" x2="51" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="51" y1="35.938" x2="51" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="122" y="36.107" fill="#000" font-size="12" textLength="44.262">Horário</text><line x1="120" y1="38.938" x2="179" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="120" y1="35.938" x2="120" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="179" y1="35.938" x2="179" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="186" y="36.107" fill="#000" font-size="12" textLength="25.658">Sala</text><line x1="184" y1="38.938" x2="219" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="184" y1="35.938" x2="184" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="219" y1="35.938" x2="219" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="230.727" y="36.107" fill="#000" font-size="12" textLength="59.912">Ocupação</text><line x1="228.727" y1="38.938" x2="295.727" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="228.727" y1="35.938" x2="228.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="295.727" y1="35.938" x2="295.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="302.727" y="36.107" fill="#000" font-size="12" textLength="51.908">Situação</text><line x1="300.727" y1="38.938" x2="367.727" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="300.727" y1="35.938" x2="300.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="367.727" y1="35.938" x2="367.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="10" y="54.076" fill="#000" font-size="12" textLength="83.807">Eng. Software</text><line x1="8" y1="56.906" x2="115" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="115" y1="53.906" x2="115" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="119" y="54.076" fill="#000" font-size="12" textLength="58.043">Ter 19:00</text><text x="183" y="54.076" fill="#000" font-size="12" textLength="42.727">LAB-02</text><text x="227.727" y="54.076" fill="#000" font-size="12" textLength="42.211">24 / 30</text><text x="299.727" y="54.076" fill="#000" font-size="12" textLength="17.314">OK</text><text x="10" y="72.045" fill="#000" font-size="12" textLength="83.807">Eng. Software</text><line x1="8" y1="74.875" x2="115" y2="74.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="71.875" x2="8" y2="73.875" style="stroke:#000;stroke-width:1;"/><line x1="115" y1="71.875" x2="115" y2="73.875" style="stroke:#000;stroke-width:1;"/><text x="119" y="72.045" fill="#000" font-size="12" textLength="58.781">Qui 19:00</text><text x="183" y="72.045" fill="#000" font-size="12" textLength="42.727">LAB-03</text><text x="227.727" y="72.045" fill="#000" font-size="12" textLength="42.211">30 / 30</text><text x="299.727" y="72.045" fill="#000" font-size="12" textLength="41.057">Lotada</text><text x="10" y="90.014" fill="#000" font-size="12" textLength="54.586">Sistemas</text><line x1="8" y1="92.844" x2="75" y2="92.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="89.844" x2="8" y2="91.844" style="stroke:#000;stroke-width:1;"/><line x1="75" y1="89.844" x2="75" y2="91.844" style="stroke:#000;stroke-width:1;"/><text x="119" y="90.014" fill="#000" font-size="12" textLength="58.043">Ter 19:00</text><text x="183" y="90.014" fill="#000" font-size="12" textLength="42.727">LAB-01</text><text x="227.727" y="90.014" fill="#000" font-size="12" textLength="42.211">18 / 25</text><text x="299.727" y="90.014" fill="#000" font-size="12" textLength="46.266">Conflito</text><text x="10" y="109.982" fill="#000" font-size="12" textLength="111.756">Alunos pendentes:</text><line x1="8" y1="112.813" x2="147" y2="112.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="109.813" x2="8" y2="111.813" style="stroke:#000;stroke-width:1;"/><line x1="147" y1="109.813" x2="147" y2="111.813" style="stroke:#000;stroke-width:1;"/><text x="159" y="109.982" fill="#000" font-size="12">2</text><text x="10" y="127.951" fill="#000" font-size="12" textLength="101.396">Alunos alocados:</text><line x1="8" y1="130.781" x2="139" y2="130.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="127.781" x2="8" y2="129.781" style="stroke:#000;stroke-width:1;"/><line x1="139" y1="127.781" x2="139" y2="129.781" style="stroke:#000;stroke-width:1;"/><text x="159" y="127.951" fill="#000" font-size="12" textLength="15.27">24</text><text x="10" y="145.92" fill="#000" font-size="12" textLength="111.814">Vagas disponíveis:</text><line x1="8" y1="148.75" x2="155" y2="148.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="145.75" x2="8" y2="147.75" style="stroke:#000;stroke-width:1;"/><line x1="155" y1="145.75" x2="155" y2="147.75" style="stroke:#000;stroke-width:1;"/><text x="159" y="145.92" fill="#000" font-size="12">6</text><rect x="9.5" y="157.25" width="140" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="24.325" y="170.389" fill="#000" font-size="12" textLength="110.35">Executar alocação</text><rect x="156.5" y="157.25" width="116" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="167.956" y="170.389" fill="#000" font-size="12" textLength="93.088">Ver pendências</text><rect x="279.5" y="157.25" width="148" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="297.546" y="170.389" fill="#000" font-size="12" textLength="111.908">Exportar resultado</text><?plantuml-src TL7DQW8n4BxlKmnxBTNTQ4iL4Qq8XGfIB5x4mxWR9R1DbloqWlLXIW-5GfzYNwoJnCj2cqFuPkRxvdTYB6fhiBB9AG4uNT47CDgDfvKgiFbgFXMK7B1oKfbHTpU6TtZcnd9W6RljCgAVlIx8qfdJHgL4IH-KRZwqYCOAAmnWMRWw9er-OTt5ZFgvF7HWfVRs3JLFGoaD-M2OPOGNq_lhZ15WVUX2pxkMZ__edfnewte4I7BHBPJ54gDs9MYQ5pGfXFT7pPn0VaTQTaDefkI-4bQr9v-61K7DPScbvMReks2j6FgDbkeIwiVO6Wzee1IcLhBvUUKYXczRsJVp8oyS7Ihc21lR4ckpfbPzoUPR5W9DyCsFjTAUgxbn5SsfjY7PEPaGCrmwoJl-Uft1Zbli_m80?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:438px;height:185px;background:#FFFFFF;" width="438px" height="185px" viewBox="0 0 438 185" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="130.078" font-weight="700">Alocação de alunos</text><text x="139.078" y="18.139" fill="#000" font-size="12" textLength="79.084">Teste 2026/2</text><line x1="6" y1="6" x2="138.078" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="138.078" y1="21.969" x2="219.162" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="138.078" y1="6" x2="219.162" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="21.969" x2="138.078" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="21.969" style="stroke:#000;stroke-width:1;"/><line x1="219.162" y1="6" x2="219.162" y2="21.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="36.107" fill="#000" font-size="12" textLength="34.512">Curso</text><line x1="8" y1="38.938" x2="51" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="35.938" x2="8" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="51" y1="35.938" x2="51" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="122" y="36.107" fill="#000" font-size="12" textLength="44.262">Horário</text><line x1="120" y1="38.938" x2="179" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="120" y1="35.938" x2="120" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="179" y1="35.938" x2="179" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="186" y="36.107" fill="#000" font-size="12" textLength="25.658">Sala</text><line x1="184" y1="38.938" x2="219" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="184" y1="35.938" x2="184" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="219" y1="35.938" x2="219" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="230.727" y="36.107" fill="#000" font-size="12" textLength="59.912">Ocupação</text><line x1="228.727" y1="38.938" x2="295.727" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="228.727" y1="35.938" x2="228.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="295.727" y1="35.938" x2="295.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="302.727" y="36.107" fill="#000" font-size="12" textLength="51.908">Situação</text><line x1="300.727" y1="38.938" x2="367.727" y2="38.938" style="stroke:#000;stroke-width:1;"/><line x1="300.727" y1="35.938" x2="300.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><line x1="367.727" y1="35.938" x2="367.727" y2="37.938" style="stroke:#000;stroke-width:1;"/><text x="10" y="54.076" fill="#000" font-size="12" textLength="83.807">Eng. Software</text><line x1="8" y1="56.906" x2="115" y2="56.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="53.906" x2="8" y2="55.906" style="stroke:#000;stroke-width:1;"/><line x1="115" y1="53.906" x2="115" y2="55.906" style="stroke:#000;stroke-width:1;"/><text x="119" y="54.076" fill="#000" font-size="12" textLength="58.043">Ter 19:00</text><text x="183" y="54.076" fill="#000" font-size="12" textLength="42.727">LAB-02</text><text x="227.727" y="54.076" fill="#000" font-size="12" textLength="42.211">24 / 30</text><text x="299.727" y="54.076" fill="#000" font-size="12" textLength="17.314">OK</text><text x="10" y="72.045" fill="#000" font-size="12" textLength="83.807">Eng. Software</text><line x1="8" y1="74.875" x2="115" y2="74.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="71.875" x2="8" y2="73.875" style="stroke:#000;stroke-width:1;"/><line x1="115" y1="71.875" x2="115" y2="73.875" style="stroke:#000;stroke-width:1;"/><text x="119" y="72.045" fill="#000" font-size="12" textLength="58.781">Qui 19:00</text><text x="183" y="72.045" fill="#000" font-size="12" textLength="42.727">LAB-03</text><text x="227.727" y="72.045" fill="#000" font-size="12" textLength="42.211">30 / 30</text><text x="299.727" y="72.045" fill="#000" font-size="12" textLength="41.057">Lotada</text><text x="10" y="90.014" fill="#000" font-size="12" textLength="54.586">Sistemas</text><line x1="8" y1="92.844" x2="75" y2="92.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="89.844" x2="8" y2="91.844" style="stroke:#000;stroke-width:1;"/><line x1="75" y1="89.844" x2="75" y2="91.844" style="stroke:#000;stroke-width:1;"/><text x="119" y="90.014" fill="#000" font-size="12" textLength="58.043">Ter 19:00</text><text x="183" y="90.014" fill="#000" font-size="12" textLength="42.727">LAB-01</text><text x="227.727" y="90.014" fill="#000" font-size="12" textLength="42.211">18 / 25</text><text x="299.727" y="90.014" fill="#000" font-size="12" textLength="46.266">Conflito</text><text x="10" y="109.982" fill="#000" font-size="12" textLength="111.756">Alunos pendentes:</text><line x1="8" y1="112.813" x2="147" y2="112.813" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="109.813" x2="8" y2="111.813" style="stroke:#000;stroke-width:1;"/><line x1="147" y1="109.813" x2="147" y2="111.813" style="stroke:#000;stroke-width:1;"/><text x="159" y="109.982" fill="#000" font-size="12">2</text><text x="10" y="127.951" fill="#000" font-size="12" textLength="101.396">Alunos alocados:</text><line x1="8" y1="130.781" x2="139" y2="130.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="127.781" x2="8" y2="129.781" style="stroke:#000;stroke-width:1;"/><line x1="139" y1="127.781" x2="139" y2="129.781" style="stroke:#000;stroke-width:1;"/><text x="159" y="127.951" fill="#000" font-size="12" textLength="15.27">24</text><text x="10" y="145.92" fill="#000" font-size="12" textLength="111.814">Vagas disponíveis:</text><line x1="8" y1="148.75" x2="155" y2="148.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="145.75" x2="8" y2="147.75" style="stroke:#000;stroke-width:1;"/><line x1="155" y1="145.75" x2="155" y2="147.75" style="stroke:#000;stroke-width:1;"/><text x="159" y="145.92" fill="#000" font-size="12">6</text><rect x="9.5" y="157.25" width="140" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="24.325" y="170.389" fill="#000" font-size="12" textLength="110.35">Executar alocação</text><rect x="156.5" y="157.25" width="116" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="167.956" y="170.389" fill="#000" font-size="12" textLength="93.088">Ver pendências</text><rect x="279.5" y="157.25" width="148" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="297.546" y="170.389" fill="#000" font-size="12" textLength="111.908">Exportar resultado</text><?plantuml-src TL7DQW8n4BxlKmnxBTNTQ4iL4Qq8XGfIB5x4mxWR9R1DbloqWlLXIW-5GfzYNwoJnCj2cqFuPkRxvdTYB6fhiBB9AG4uNT47CDgDfvKgiFbgFXMK7B1oKfbHTpU6TtZcnd9W6RljCgAVlIx8qfdJHgL4IH-KRZwqYCOAAmnWMRWw9er-OTt5ZFgvF7HWfVRs3JLFGoaD-M2OPOGNq_lhZ15WVUX2pxkMZ__edfnewte4I7BHBPJ54gDs9MYQ5pGfXFT7pPn0VaTQTaDefkI-4bQr9v-61K7DPScbvMReks2j6FgDbkeIwiVO6Wzee1IcLhBvUUKYXczRsJVp8oyS7Ihc21lR4ckpfbPzoUPR5W9DyCsFjTAUgxbn5SsfjY7PEPaGCrmwoJl-Uft1Zbli_m80?></g></svg></div></div>
+
+<h3 id="6-pendencias-que-impedem-a-conclusao">6. Pendências que impedem a conclusão<a class="headerlink" href="#6-pendencias-que-impedem-a-conclusao" title="Permanent link">&para;</a></h3>
+<p>Toda inconsistência fica registrada com motivo e ação necessária para o administrador.</p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:614px;height:192px;background:#FFFFFF;" width="614px" height="192px" viewBox="0 0 614 192" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="161.379" font-weight="700">Pendências da alocação</text><rect x="172.879" y="9.5" width="132" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="191.465" y="22.639" fill="#000" font-size="12" textLength="94.828">Voltar ao painel</text><line x1="6" y1="6" x2="169.379" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="169.379" y1="30.969" x2="308.379" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="169.379" y1="6" x2="308.379" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="30.969" x2="169.379" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="308.379" y1="6" x2="308.379" y2="30.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="45.107" fill="#000" font-size="12" textLength="92.268">Aluno / registro</text><line x1="8" y1="47.938" x2="139" y2="47.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="44.938" x2="8" y2="46.938" style="stroke:#000;stroke-width:1;"/><line x1="139" y1="44.938" x2="139" y2="46.938" style="stroke:#000;stroke-width:1;"/><text x="146" y="45.107" fill="#000" font-size="12" textLength="40.178">Motivo</text><line x1="144" y1="47.938" x2="195" y2="47.938" style="stroke:#000;stroke-width:1;"/><line x1="144" y1="44.938" x2="144" y2="46.938" style="stroke:#000;stroke-width:1;"/><line x1="195" y1="44.938" x2="195" y2="46.938" style="stroke:#000;stroke-width:1;"/><text x="338.154" y="45.107" fill="#000" font-size="12" textLength="29.502">Ação</text><line x1="336.154" y1="47.938" x2="371.154" y2="47.938" style="stroke:#000;stroke-width:1;"/><line x1="336.154" y1="44.938" x2="336.154" y2="46.938" style="stroke:#000;stroke-width:1;"/><line x1="371.154" y1="44.938" x2="371.154" y2="46.938" style="stroke:#000;stroke-width:1;"/><text x="10" y="63.076" fill="#000" font-size="12" textLength="63.199">Ana Souza</text><line x1="8" y1="65.906" x2="83" y2="65.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="62.906" x2="8" y2="64.906" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="62.906" x2="83" y2="64.906" style="stroke:#000;stroke-width:1;"/><text x="143" y="63.076" fill="#000" font-size="12" textLength="190.154">Dados acadêmicos incompletos</text><text x="335.154" y="63.076" fill="#000" font-size="12" textLength="100.775">Corrigir cadastro</text><text x="10" y="81.045" fill="#000" font-size="12" textLength="68.596">Bruno Lima</text><line x1="8" y1="83.875" x2="91" y2="83.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="80.875" x2="8" y2="82.875" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="80.875" x2="91" y2="82.875" style="stroke:#000;stroke-width:1;"/><text x="143" y="81.045" fill="#000" font-size="12" textLength="143.783">Capacidade insuficiente</text><text x="335.154" y="81.045" fill="#000" font-size="12" textLength="144.791">Disponibilizar outra sala</text><text x="10" y="99.014" fill="#000" font-size="12" textLength="60.475">Carla Reis</text><line x1="8" y1="101.844" x2="91" y2="101.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="98.844" x2="8" y2="100.844" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="98.844" x2="91" y2="100.844" style="stroke:#000;stroke-width:1;"/><text x="143" y="99.014" fill="#000" font-size="12" textLength="111.738">Conflito de horário</text><text x="335.154" y="99.014" fill="#000" font-size="12" textLength="84.451">Revisar oferta</text><text x="7" y="118.982" fill="#000" font-size="12" textLength="215.953" font-weight="700">Alocação automática bloqueada</text><text x="10" y="134.951" fill="#000" font-size="12" textLength="39.668">Regra:</text><line x1="8" y1="137.781" x2="59" y2="137.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="134.781" x2="8" y2="136.781" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="134.781" x2="59" y2="136.781" style="stroke:#000;stroke-width:1;"/><text x="224.953" y="134.951" fill="#000" font-size="12" textLength="381.521">Todas as pendências devem ser resolvidas antes da conclusão.</text><text x="10" y="152.92" fill="#000" font-size="12" textLength="42.281">Status:</text><line x1="8" y1="155.75" x2="67" y2="155.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="152.75" x2="8" y2="154.75" style="stroke:#000;stroke-width:1;"/><line x1="67" y1="152.75" x2="67" y2="154.75" style="stroke:#000;stroke-width:1;"/><text x="224.953" y="152.92" fill="#000" font-size="12" textLength="254.197">[!] Aguardando correção do administrador</text><rect x="9.5" y="164.25" width="244" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="38.257" y="177.389" fill="#000" font-size="12" textLength="186.486">Corrigir pendência selecionada</text><rect x="260.5" y="164.25" width="156" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="281.336" y="177.389" fill="#000" font-size="12" textLength="114.328">Atualizar validação</text><?plantuml-src LPBFQjn03CRl-nJgNWkRDfH2ImXnjiSMogRqikn1dj5k1EEHgvdn8NyU9lHGw6lunQhnbBG1OykszDEdJtELCcfE6FBgVWLm_zfk01VzvLUAVluT7MC2Zu117Cw_vfzoSTPVmWFilqkmKa214JbIE5ZbOqKiX7KNIXGu0wKJfwoojfhr5yayjR1ROEk_oH7XHieTrb-Vq4i2T6Zz1tOMStGoZ86onG-m5LK-iO9bO4KtnhNMXfzvM21R7D6nHqzMdSgH7LFCLF6SHedSS-0xqoybAu8PW0spHGq8E-AqO2GU0sS1uzoApa_AOfztD76gnKVIZ2y6D-kwPwy0IvPXVihi4FeWFmgPvkfWQxQZa-B7skYRs2nWr_Y_xpJH08dKN4mI9bvoR8nb9KwY2oLPcqsZtMJC9Isu_Qi3TAU2wZ5wiLHLQehi3Vt0iIx5ZDONulVFtlwJOVq3EPPeoWyLtUM2pRl9dhvDshR_kBgokkKqhTvkpj-Slzzyw2dZkpy0?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" data-diagram-type="SALT" style="width:614px;height:192px;background:#FFFFFF;" width="614px" height="192px" viewBox="0 0 614 192" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" contentStyleType="text/css" class="diagram"><?plantuml 1.2026.9beta4?><defs/><g font-family="sans-serif" lengthAdjust="spacing"><text x="7" y="18.139" fill="#000" font-size="12" textLength="161.379" font-weight="700">Pendências da alocação</text><rect x="172.879" y="9.5" width="132" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="191.465" y="22.639" fill="#000" font-size="12" textLength="94.828">Voltar ao painel</text><line x1="6" y1="6" x2="169.379" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="169.379" y1="30.969" x2="308.379" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="169.379" y1="6" x2="308.379" y2="6" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="30.969" x2="169.379" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="6" y1="6" x2="6" y2="30.969" style="stroke:#000;stroke-width:1;"/><line x1="308.379" y1="6" x2="308.379" y2="30.969" style="stroke:#000;stroke-width:1;"/><text x="10" y="45.107" fill="#000" font-size="12" textLength="92.268">Aluno / registro</text><line x1="8" y1="47.938" x2="139" y2="47.938" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="44.938" x2="8" y2="46.938" style="stroke:#000;stroke-width:1;"/><line x1="139" y1="44.938" x2="139" y2="46.938" style="stroke:#000;stroke-width:1;"/><text x="146" y="45.107" fill="#000" font-size="12" textLength="40.178">Motivo</text><line x1="144" y1="47.938" x2="195" y2="47.938" style="stroke:#000;stroke-width:1;"/><line x1="144" y1="44.938" x2="144" y2="46.938" style="stroke:#000;stroke-width:1;"/><line x1="195" y1="44.938" x2="195" y2="46.938" style="stroke:#000;stroke-width:1;"/><text x="338.154" y="45.107" fill="#000" font-size="12" textLength="29.502">Ação</text><line x1="336.154" y1="47.938" x2="371.154" y2="47.938" style="stroke:#000;stroke-width:1;"/><line x1="336.154" y1="44.938" x2="336.154" y2="46.938" style="stroke:#000;stroke-width:1;"/><line x1="371.154" y1="44.938" x2="371.154" y2="46.938" style="stroke:#000;stroke-width:1;"/><text x="10" y="63.076" fill="#000" font-size="12" textLength="63.199">Ana Souza</text><line x1="8" y1="65.906" x2="83" y2="65.906" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="62.906" x2="8" y2="64.906" style="stroke:#000;stroke-width:1;"/><line x1="83" y1="62.906" x2="83" y2="64.906" style="stroke:#000;stroke-width:1;"/><text x="143" y="63.076" fill="#000" font-size="12" textLength="190.154">Dados acadêmicos incompletos</text><text x="335.154" y="63.076" fill="#000" font-size="12" textLength="100.775">Corrigir cadastro</text><text x="10" y="81.045" fill="#000" font-size="12" textLength="68.596">Bruno Lima</text><line x1="8" y1="83.875" x2="91" y2="83.875" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="80.875" x2="8" y2="82.875" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="80.875" x2="91" y2="82.875" style="stroke:#000;stroke-width:1;"/><text x="143" y="81.045" fill="#000" font-size="12" textLength="143.783">Capacidade insuficiente</text><text x="335.154" y="81.045" fill="#000" font-size="12" textLength="144.791">Disponibilizar outra sala</text><text x="10" y="99.014" fill="#000" font-size="12" textLength="60.475">Carla Reis</text><line x1="8" y1="101.844" x2="91" y2="101.844" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="98.844" x2="8" y2="100.844" style="stroke:#000;stroke-width:1;"/><line x1="91" y1="98.844" x2="91" y2="100.844" style="stroke:#000;stroke-width:1;"/><text x="143" y="99.014" fill="#000" font-size="12" textLength="111.738">Conflito de horário</text><text x="335.154" y="99.014" fill="#000" font-size="12" textLength="84.451">Revisar oferta</text><text x="7" y="118.982" fill="#000" font-size="12" textLength="215.953" font-weight="700">Alocação automática bloqueada</text><text x="10" y="134.951" fill="#000" font-size="12" textLength="39.668">Regra:</text><line x1="8" y1="137.781" x2="59" y2="137.781" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="134.781" x2="8" y2="136.781" style="stroke:#000;stroke-width:1;"/><line x1="59" y1="134.781" x2="59" y2="136.781" style="stroke:#000;stroke-width:1;"/><text x="224.953" y="134.951" fill="#000" font-size="12" textLength="381.521">Todas as pendências devem ser resolvidas antes da conclusão.</text><text x="10" y="152.92" fill="#000" font-size="12" textLength="42.281">Status:</text><line x1="8" y1="155.75" x2="67" y2="155.75" style="stroke:#000;stroke-width:1;"/><line x1="8" y1="152.75" x2="8" y2="154.75" style="stroke:#000;stroke-width:1;"/><line x1="67" y1="152.75" x2="67" y2="154.75" style="stroke:#000;stroke-width:1;"/><text x="224.953" y="152.92" fill="#000" font-size="12" textLength="254.197">[!] Aguardando correção do administrador</text><rect x="9.5" y="164.25" width="244" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="38.257" y="177.389" fill="#000" font-size="12" textLength="186.486">Corrigir pendência selecionada</text><rect x="260.5" y="164.25" width="156" height="17.969" fill="#EEE" style="stroke:#000;stroke-width:2.5;" rx="5" ry="5"/><text x="281.336" y="177.389" fill="#000" font-size="12" textLength="114.328">Atualizar validação</text><?plantuml-src LPBFQjn03CRl-nJgNWkRDfH2ImXnjiSMogRqikn1dj5k1EEHgvdn8NyU9lHGw6lunQhnbBG1OykszDEdJtELCcfE6FBgVWLm_zfk01VzvLUAVluT7MC2Zu117Cw_vfzoSTPVmWFilqkmKa214JbIE5ZbOqKiX7KNIXGu0wKJfwoojfhr5yayjR1ROEk_oH7XHieTrb-Vq4i2T6Zz1tOMStGoZ86onG-m5LK-iO9bO4KtnhNMXfzvM21R7D6nHqzMdSgH7LFCLF6SHedSS-0xqoybAu8PW0spHGq8E-AqO2GU0sS1uzoApa_AOfztD76gnKVIZ2y6D-kwPwy0IvPXVihi4FeWFmgPvkfWQxQZa-B7skYRs2nWr_Y_xpJH08dKN4mI9bvoR8nb9KwY2oLPcqsZtMJC9Isu_Qi3TAU2wZ5wiLHLQehi3Vt0iIx5ZDONulVFtlwJOVq3EPPeoWyLtUM2pRl9dhvDshR_kBgokkKqhTvkpj-Slzzyw2dZkpy0?></g></svg></div></div>
+
+<h2 id="regras-representadas">Regras representadas<a class="headerlink" href="#regras-representadas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Uma inscrição por aluno, teste e semestre.</li>
+<li>Dados acadêmicos obrigatórios e previamente cadastrados.</li>
+<li>Peso numérico entre 0 e 1, inclusive, associado a uma disciplina.</li>
+<li>Alocação condicionada à existência de curso, horário, sala e capacidade.</li>
+<li>Duplicidade, dados inválidos, conflito de horário e falta de vagas geram pendências e bloqueiam a conclusão automática.</li>
+</ul>
+<h2 id="fonte-editavel">Fonte editável<a class="headerlink" href="#fonte-editavel" title="Permanent link">&para;</a></h2>
+<p>O código completo das telas está disponível em <a href="../../diagramas/prototipos_baixa_fidelidade.puml">prototipos_baixa_fidelidade.puml</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
