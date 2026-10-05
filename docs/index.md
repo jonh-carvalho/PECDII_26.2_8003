@@ -13,7 +13,7 @@ hide:
             PECDII_26.2_8003_I
         </div>
         <div class="card-content">
-            <p class="contributors">XXX, xxx, xxx,xxxx</p>
+            <p class="contributors">Gabriel, Guilherme, Arthur, Bernardo</p>
             <a href="https://github.com/Projetos-de-Extensao/PECDII_26.2_8003_I" class="button primary-btn">
                 <span class="octicon-arrow-right-24:"></span> Ver Repositório
             </a>
@@ -26,7 +26,7 @@ hide:
             PECDII_26.2_8003_II
         </div>
         <div class="card-content">
-            <p class="contributors">xxx, xxx, xxx, xxx</p>
+            <p class="contributors">Bento, Carlos, Julia, Lucas</p>
             <a href="https://github.com/Projetos-de-Extensao/PECDII_26.2_8003_II" class="button primary-btn">
                 <span class="octicon-arrow-right-24:"></span> Ver Repositório
             </a>
