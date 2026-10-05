@@ -11,7 +11,7 @@
 | __07__ - 14/09/26     | :material-check: [Engenharia de Requisitos](..//assets/Aulas/Engenharia%20de%20Requisitos_Cap05.pdf)  <br> - [Análise OO e UML](../assets/Aulas/AnaliseOO&UML.pdf) <br> - Diagrama de Casos de Uso <br> |
 | __08__ - 21/09/26     | :material-check: - [Classes](../assets/Aulas/Classes_Pacotes.pdf)   |
 | __09__ - 28/09/26     | :material-check: - AP1   |
-| __10__ - 05/10/26     | :material-check: Roteiro Django Rest - Intro Python BD  |
+| __10__ - 05/10/26     | :material-check: Roteiro [Django](../Disciplina/Roteiros/Construcao/Django/) Rest - Intro Python BD  |
 | __11__ - 12/10/26     | :material-check: Feriado |
 | __12__ - 19/10/26     | :material-check: Roteiro Streaming |
 | __13__ - 26/10/26     | :material-check: Roteiro Streaming |
