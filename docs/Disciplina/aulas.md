@@ -11,6 +11,15 @@
 | __07__ - 14/09/26     | :material-check: [Engenharia de Requisitos](..//assets/Aulas/Engenharia%20de%20Requisitos_Cap05.pdf)  <br> - [Análise OO e UML](../assets/Aulas/AnaliseOO&UML.pdf) <br> - Diagrama de Casos de Uso <br> |
 | __08__ - 21/09/26     | :material-check: - [Classes](../assets/Aulas/Classes_Pacotes.pdf)   |
 | __09__ - 28/09/26     | :material-check: - AP1   |
+| __10__ - 05/10/26     | :material-check: Roteiro Django Rest - Intro Python BD  |
+| __11__ - 12/10/26     | :material-check: Feriado |
+| __12__ - 19/10/26     | :material-check: Roteiro Streaming |
+| __13__ - 26/10/26     | :material-check: Roteiro Streaming |
+| __14__ - 02/11/26     | :material-check: Roteiro Autenticação |
+| __15__ - 09/11/26     | :material-check: Feriado |
+| __16__ - 16/11/26     | :material-check: AP2 |
+| __17__ - 23/11/26     | :material-check: |
+| __18__ - 30/11/30     | :material-check: AS |
 <!--
 | __05__ - 27/03/26     | :material-check: Elaboração 5w2h  <br> :material-check:[Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf) e [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf)|
 | __06__ - 03/04/26     | :material-check: Feriado |
