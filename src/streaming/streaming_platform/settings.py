@@ -38,10 +38,37 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_spectacular',
+    'rest_framework.authtoken', 
+    'corsheaders',
     'content_app',
 ]
 
+REST_FRAMEWORK = {
+       'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+       'DEFAULT_AUTHENTICATION_CLASSES': [
+           'rest_framework.authentication.TokenAuthentication',
+       ],
+       'DEFAULT_PERMISSION_CLASSES': [
+           'rest_framework.permissions.IsAuthenticated',
+       ],
+   }
+
+SPECTACULAR_SETTINGS = {
+   'TITLE': 'API Streaming',
+   'DESCRIPTION': 'Documentação da API para o app de streaming de áudio e vídeo',
+   'VERSION': '1.0.0',
+}
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+       "http://localhost:3000",  # Exemplo para um app local
+   ]
+
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
